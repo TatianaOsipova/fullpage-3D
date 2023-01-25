@@ -50,7 +50,7 @@
   transition: 0.3s;
   position: relative;
 }
-.navbar .menu .burger .bar:after, .navbar .menu .burger .bar:before {
+.navbar .menu .burger .bar::after, .navbar .menu .burger .bar::before {
   content: "";
   position: absolute;
   width: inherit;
@@ -58,10 +58,10 @@
   background: #eee;
   transition: 0.5s;
 }
-.navbar .menu .burger .bar:after {
+.navbar .menu .burger .bar::after {
   transform: translateY(9px);
 }
-.navbar .menu .burger .bar:before {
+.navbar .menu .burger .bar::before {
   transform: translateY(-9px);
 }
 
@@ -122,4 +122,39 @@
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
+}
+
+.container.active .bar {
+  transform: rotate(360deg);
+  background-color: transparent;
+}
+.container.active .bar::before {
+  transform: translateY(0) rotate(45deg);
+}
+.container.active .bar::after {
+  transform: translateY(0) rotate(-45deg);
+}
+.container.active .main {
+  -webkit-animation: main-animation 1s ease;
+          animation: main-animation 1s ease;
+  cursor: pointer;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+
+@-webkit-keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: perspective(1300px);
+  }
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: perspective(1300px);
+  }
 }/*# sourceMappingURL=style.css.map */
