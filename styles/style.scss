@@ -37,6 +37,39 @@
                 font-weight: 300;
             }
         }
+        .burger{
+            height: 4rem;
+            width: 3rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .bar{
+                width: 1.9rem;
+                height: 1.5px;
+                border-radius: 2px;
+                background-color: #eee;
+                transition: .3s;
+                position: relative;
+                &:after, &:before{
+                    content: '';
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                    background: #eee;
+                    transition: .5s;
+                }
+                &:after{
+                    transform: translateY(9px);
+
+                }
+                &:before{
+                    transform: translateY(-9px);
+
+                }
+
+            }
+        }
     }
 }
 

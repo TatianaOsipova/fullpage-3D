@@ -34,6 +34,36 @@
 .navbar .menu .logo span {
   font-weight: 300;
 }
+.navbar .menu .burger {
+  height: 4rem;
+  width: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar .menu .burger .bar {
+  width: 1.9rem;
+  height: 1.5px;
+  border-radius: 2px;
+  background-color: #eee;
+  transition: 0.3s;
+  position: relative;
+}
+.navbar .menu .burger .bar:after, .navbar .menu .burger .bar:before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: #eee;
+  transition: 0.5s;
+}
+.navbar .menu .burger .bar:after {
+  transform: translateY(9px);
+}
+.navbar .menu .burger .bar:before {
+  transform: translateY(-9px);
+}
 
 /* Page */
 .container {
