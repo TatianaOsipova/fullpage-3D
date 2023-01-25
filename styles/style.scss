@@ -8,20 +8,35 @@
 }
 
 // navbar
-.navbar{
+.navbar {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 10;
     height: 0.3rem;
-    .menu{
+
+    .menu {
         max-width: 72rem;
         width: 100%;
         margin: 0 auto;
         padding: 0 2rem;
-        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
 
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 4rem;
+
+            span {
+                font-weight: 300;
+            }
+        }
     }
 }
 
@@ -85,7 +100,7 @@
                         border-radius: 25px;
                         color: #fff;
                         text-transform: uppercase;
-                        cursor: pointer;                        
+                        cursor: pointer;
                         text-decoration: none;
                     }
                 }
