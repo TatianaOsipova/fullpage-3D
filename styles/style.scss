@@ -24,7 +24,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #fff;
+        // color: #fff;
 
         .logo {
             font-size: 1.1rem;
@@ -32,9 +32,11 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             line-height: 4rem;
+            color: red;
 
             span {
-                font-weight: 300;
+                font-weight: 600;
+                color: black;
             }
         }
 
@@ -105,7 +107,7 @@
             position: relative;
 
             &.header__one {
-                background: url(./img/bg-1.jpg) no-repeat top center/cover;
+                background: url(../img/1.jpg) no-repeat top center/cover;
             }
 
             .header {
@@ -192,6 +194,13 @@
         animation: main-animation 1s ease;
         cursor: pointer;
         transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+        &:hover{
+            transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+            + .shadow.one{
+                transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+
+            }
+        }
     }
 
     .shadow.one {
