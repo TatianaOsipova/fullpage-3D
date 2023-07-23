@@ -89,6 +89,9 @@
   width: 100%;
   position: relative;
 }
+.container .main header span {
+  font-weight: 700;
+}
 .container .main header.header__one {
   background: url(../img/1.jpg) no-repeat top center/cover;
 }

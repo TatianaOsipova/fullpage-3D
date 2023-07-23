@@ -106,6 +106,10 @@
             width: 100%;
             position: relative;
 
+            span{
+                font-weight: 700;
+            }
+
             &.header__one {
                 background: url(../img/1.jpg) no-repeat top center/cover;
             }
